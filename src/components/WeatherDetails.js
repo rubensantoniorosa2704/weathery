@@ -6,16 +6,19 @@ function WeatherDetails({ data }) {
   return (
     <div className="bottom">
       <div className="feels">
+        <i className="fa-solid fa-water"></i>
+        <p className="description">Sensação</p>
         <p className="bold">{data.main.feels_like.toFixed()}°C</p>
-        <p>Sensação</p>
       </div>
       <div className="humidity">
+        <i className="fa-solid fa-droplet"></i>
+        <p className="description">Humidade</p>
         <p className="bold">{data.main.humidity}%</p>
-        <p>Humidade</p>
       </div>
       <div className="wind">
-        <p className="bold">{data.wind.speed.toFixed()} Km/h</p>
-        <p>Vento</p>
+        <i className="fa-solid fa-wind"></i>
+        <p className="description">Vento</p>
+        <p className="bold">{data.wind.speed.toFixed()} km/h</p>
       </div>
     </div>
   );
